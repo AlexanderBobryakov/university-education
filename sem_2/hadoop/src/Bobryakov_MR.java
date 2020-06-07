@@ -144,9 +144,16 @@ public class Bobryakov_MR extends Configured implements Tool {
             // key - id поста, являющегося QUESTION
             for (PostData val : values) {
                 if (val.getType().toString().equals(QUESTION)) {
-                    question = val;
+                    question = new PostData();
+                    question.setOwnerUserId(val.getOwnerUserId());
+                    question.setScore(val.getScore());
+                    question.setType(val.getType());
                 } else {
-                    answers.add(val);
+                    PostData temp = new PostData();
+                    temp.setOwnerUserId(val.getOwnerUserId());
+                    temp.setScore(val.getScore());
+                    temp.setType(val.getType());
+                    answers.add(temp);
                 }
             }
             if (question != null && !answers.isEmpty()) {
@@ -398,7 +405,7 @@ public class Bobryakov_MR extends Configured implements Tool {
             }
         }
     }
-    
+
     @Override
     public int run(String[] args) throws Exception {
         Path postsPath = new Path(args[0]);  // где лежат посты
@@ -413,7 +420,7 @@ public class Bobryakov_MR extends Configured implements Tool {
         // Указываем класс Редьюсера
         job.setReducerClass(PostsJoinPostsReducer.class);
         // Кол-во тасков
-        job.setNumReduceTasks(1);
+        job.setNumReduceTasks(10);
         // Типы для мапперов
         job.setMapOutputKeyClass(LongWritable.class);
         job.setMapOutputValueClass(PostData.class);
@@ -454,7 +461,7 @@ public class Bobryakov_MR extends Configured implements Tool {
 //            job2.setOutputFormatClass(SequenceFileOutputFormat.class);
 
             // Запускаем джобу и ждем окончания ее выполнения
-        success = job2.waitForCompletion(true);
+            success = job2.waitForCompletion(true);
 
         }
         // Возвращаем ее статус в виде exit-кода процесса

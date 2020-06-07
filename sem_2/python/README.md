@@ -1,1 +1,1 @@
-## Machine Learning МИФИ/МФТИ
+## Python МФТИ
