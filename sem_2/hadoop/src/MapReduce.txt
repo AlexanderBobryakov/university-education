@@ -1,0 +1,14 @@
+Собираем jar
+Заходим через winScp на localhost
+кидаем в свою папку jar и из нее запускаем
+
+запуск jar
+yarn jar mr-jobs-1.0-SNAPSHOT.jar ru.mai.dep806.bigdata.mr.Bobryakov_MR /user/stud/stackoverflow/landing/Posts /user/stud/stackoverflow/landing/Users /user/stud/abobryakov/post_join_post_MR /user/stud/abobryakov/Bobryakov_MR
+yarn jar mr-jobs-1.0-SNAPSHOT.jar ru.mai.dep806.bigdata.mr.Bobryakov_MR_Optim1 /user/stud/stackoverflow/landing/Posts /user/stud/stackoverflow/landing/Users /user/stud/abobryakov/post_join_post_MR_Optim1 /user/stud/abobryakov/Bobryakov_MR_Optim1
+yarn jar mr-jobs-1.0-SNAPSHOT.jar ru.mai.dep806.bigdata.mr.Bobryakov_MR_Optim2 /user/stud/stackoverflow/landing/Posts /user/stud/stackoverflow/landing/Users /user/stud/abobryakov/post_join_post_MR_Optim2 /user/stud/abobryakov/Bobryakov_MR_Optim2
+
+логи
+yarn logs -applicationId application_1591011268500_0078
+
+
+yarn jar mr-jobs-1.0-SNAPSHOT.jar ru.mai.dep806.bigdata.mr.SaharovS /user/stud/stackoverflow/landing/Posts /user/stud/stackoverflow/landing/Users /user/stud/SaharovS/MR_stage1_result /user/stud/SaharovS/MR_stage2_result
