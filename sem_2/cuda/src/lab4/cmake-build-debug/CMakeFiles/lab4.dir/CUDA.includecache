@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+G:/Projects/CUDA/lab4/main.cu
+stdio.h
+-
+thrust/extrema.h
+-
+thrust/device_vector.h
+-
+stdlib.h
+-
+math.h
+-
+stack
+-
+vector
+-
+iomanip
+-
+

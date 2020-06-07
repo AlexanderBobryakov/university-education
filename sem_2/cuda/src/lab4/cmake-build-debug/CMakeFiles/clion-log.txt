@@ -1,0 +1,9 @@
+"G:\Programs\CLion\CLion 2020.1\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.25.28610/bin/Hostx64/x64/nmake.exe" -G "CodeBlocks - NMake Makefiles" G:\Projects\CUDA\lab4
+-- The CUDA compiler identification is NVIDIA 10.2.89
+-- Check for working CUDA compiler: G:/Programs/CUDA/Development/bin/nvcc.exe
+-- Check for working CUDA compiler: G:/Programs/CUDA/Development/bin/nvcc.exe -- works
+-- Detecting CUDA compiler ABI info
+-- Detecting CUDA compiler ABI info - done
+-- Configuring done
+-- Generating done
+-- Build files have been written to: G:/Projects/CUDA/lab4/cmake-build-debug

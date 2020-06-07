@@ -1,0 +1,4 @@
+"G:\Programs\CLion\CLion 2020.1\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.25.28610/bin/Hostx64/x64/nmake.exe" -G "CodeBlocks - NMake Makefiles" G:\Projects\CUDA\lab3
+-- Configuring done
+-- Generating done
+-- Build files have been written to: G:/Projects/CUDA/lab3/cmake-build-debug

@@ -1,0 +1,68 @@
+// Для компиляции nvcc sample_1.cu
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <assert.h>
+/*
+	threadIdx.x, threadIdx.y, threadIdx.z		// Номер потока в блоке
+	blockIdx.x, blockIdx.y, blockIdx.z			// Номер блока в сетке
+	blockDim.x, blockDim.y, blockDim.z			// Размер одного блока по каждому измерению
+	gridDim.x, gridDim.y, gridDim.z				// Размер grid'а блоков по каждому измерению
+*/
+
+#define CSC(call) do { 			\
+	cudaError_t res = call;		\
+	if (res != cudaSuccess) {	\
+		fprintf(stderr, "CUDA Error in %s:%d: %s", __FILE__, 	\
+					__LINE__, cudaGetErrorString(res));			\
+		exit(0);				\
+	}							\
+} while (0)
+
+
+__global__ void kernel(int *arr, int n) {
+	int idx = blockDim.x * blockIdx.x + threadIdx.x;		// Абсолютный номер потока
+	int offset = blockDim.x * gridDim.x;					// Общее кол-во потоков
+	while(idx < n) {										// Проходимся по всем элементам массива
+		arr[idx] *= 2.0;
+		idx += offset;
+	}
+}
+
+int main() {
+	int i, n = 10000000;
+	int *arr = (int *)malloc(sizeof(int) * n);	// Выделение памяти под массив на CPU
+	for(i = 0; i < n; i++)						// Инициализация
+		arr[i] = i;
+	int *dev_arr;
+	CSC(cudaMalloc(&dev_arr, sizeof(int) * n));		// Выделение памяти под массив на GPU
+
+	CSC(cudaMemcpy(dev_arr, arr, sizeof(int) * n, cudaMemcpyHostToDevice));	// Копирование данных с CPU на GPU
+
+	cudaEvent_t start, stop;
+	float t;
+	CSC(cudaEventCreate(&start));
+	CSC(cudaEventCreate(&stop));
+
+	CSC(cudaEventRecord(start, 0));
+
+	kernel<<<256, 32>>>(dev_arr, n);			// 512 - кол-во блоков, 256 кол-во потоков в одном блоке
+												// Если указываются просто числа, то индексация в grid'е и в блоке одномерная (только по x)
+	CSC(cudaGetLastError());
+
+	CSC(cudaEventRecord(stop, 0));
+	CSC(cudaEventSynchronize(stop));
+	CSC(cudaEventElapsedTime(&t, start, stop));
+	printf("time = %f\n", t);
+
+	CSC(cudaEventDestroy(start));
+	CSC(cudaEventDestroy(stop));
+
+	CSC(cudaMemcpy(arr, dev_arr, sizeof(int) * n, cudaMemcpyDeviceToHost));	// Копирование данных с GPU на CPU
+	CSC(cudaFree(dev_arr));							// Освобождаем память на GPU, так как дальше она нам не нужна
+	for(i = n - 10; i < n; i++)					// Печатаем последние 10 элементов массива
+		printf("%d ", arr[i]);
+	printf("\n");
+	free(arr);									// Освобождаем память на CPU
+	return 0;
+}

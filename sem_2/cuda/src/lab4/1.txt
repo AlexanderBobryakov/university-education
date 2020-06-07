@@ -1,0 +1,344 @@
+#include <stdio.h>
+#include <thrust/extrema.h>
+#include <thrust/device_vector.h>
+#include <stdlib.h>
+#include <math.h>
+#include <stack>
+#include <vector>
+#include <iomanip>
+ 
+//#include <eigen3/Eigen/Dense>
+ 
+//namespace eig = Eigen;
+ 
+//using matrix = eig::Matrix<double, eig::Dynamic, eig::Dynamic>;
+//using map_matrix = eig::Map<matrix>;
+ 
+ 
+ 
+ 
+#define N 256
+ 
+#define ZERO 1e-7
+ 
+#define get2D(arr, n, m, i, j) (arr[j*n + i])
+ 
+#define CSC(call) do {              \
+    cudaError_t res = call;         \
+    if (res != cudaSuccess) {       \
+        fprintf(stderr, "CUDA error %s:%d message: %s\n", __FILE__, __LINE__,   \
+                cudaGetErrorString(res));   \
+        exit(0);                            \
+    }                                       \
+} while(0)
+ 
+ 
+ 
+struct AbsMax {
+    __host__ __device__ bool operator()(double a, double b) {
+        return fabs(a) < fabs(b);
+    }
+};
+ 
+void printMatrix(double* A, int n, int m) {
+    for(int i = 0; i < n; ++i) {
+        for(int j = 0; j < m; ++j) {
+            //printf("(%d %d %d) ", i, j, j*m+i);
+            int idx = j*n + i;
+            printf("%.2lf ", A[idx]);
+        }
+        printf("\n");
+    }
+    printf("\n");
+}
+ 
+__global__ void swapRows(double* A, int n, int m, int k, int i, int j) {
+    int idx = blockDim.x * blockIdx.x + threadIdx.x;
+    int offset = gridDim.x * blockDim.x;
+    while(idx < m + k) {
+        int cnt = idx * n;
+        int first  = i + cnt;
+        int second = j + cnt;
+        double tmp = A[first];
+        A[first] = A[second];
+        A[second] = tmp;
+        idx += offset;
+    }
+}
+ 
+ 
+__global__ void subtractForward(double* A, int n, int m, int k, int i, int j) {
+    int col = blockIdx.x;
+    int row = threadIdx.x;
+    int colOffset = gridDim.x;
+    int rowOffset = blockDim.x;
+ 
+    double a1 = A[n*j + i];
+ 
+    for(col = blockIdx.x + j + 1; col < m + k; col += colOffset) {
+        double cur = A[col*n + i];
+ 
+        for(row = threadIdx.x + i + 1; row < n; row += rowOffset) {
+            double l = A[n*j + row] / a1;
+            A[col*n + row] -= l * cur;
+        }
+    }
+}
+ 
+__global__ void subtractBack1(double* A, int n, int m, int k, int i, int j) {
+    int col = blockIdx.x;
+    int row = threadIdx.x;
+    int colOffset = gridDim.x;
+    int rowOffset = blockDim.x;
+ 
+    double a1 = A[j*n + i];
+    int start = m*n;
+    for(col = blockIdx.x; col < k; col += colOffset) {
+        double cur = A[start + col*n + i];
+        for(row = threadIdx.x; row < i; row += rowOffset) {
+            double l = A[j*n + row] / a1;
+            A[start + col*n + row] -= l * cur;
+        }
+    }
+ 
+}
+ 
+void printMatrixErr(double* A, int n, int m, int k) {
+    //fprintf(stderr, "Err\n");
+    fprintf(stderr, "%d %d %d\n", n, m, k);
+    for(int i = 0; i < n; ++i) {
+        for(int j = 0; j < m; ++j) {
+            //printf("(%d %d %d) ", i, j, j*m+i);
+            int idx = j*n + i;
+            fprintf(stderr, "%.2lf ", A[idx]);
+        }
+        printf("\n");
+    }
+    printf("\n");
+ 
+    for(int i = 0; i < n; ++i) {
+        for(int j = 0; j < k; ++j) {
+            int idx = n*m + j*n + i;
+            fprintf(stderr, "%.2lf ", A[idx]);
+        }
+        printf("\n");
+    }
+ 
+    printf("\n");
+ 
+}
+ 
+__global__ void print(double* A, int n, int m, int k) {
+    for(int i = 0; i < n; ++i) {
+        for(int j = 0; j < m; ++j) {
+            printf("%.8lf ", A[j*n + i]);
+        }
+        printf("| ");
+        for(int j = 0; j < k; ++j) {
+            printf("%8lf ", A[m*n + j*n + i]);
+        }
+        printf("\n");
+    }
+    printf("\n");
+}
+ 
+int main() {
+    int n,m,k;
+    scanf("%d%d%d", &n, &m, &k);
+ 
+    double* A = (double*)malloc(n * (m+k)  * sizeof(double));
+    //memset(A, 0, sizeof(double)*n*(m+k));
+    //double* B = (double*)malloc(n * k * sizeof(double));
+ 
+    double* A1 = (double*)malloc(n * (m+k) * sizeof(double));
+    double* B1 = (double*)malloc(n * k * sizeof(double));
+    double* B_test = (double*)malloc(n * k * sizeof(double));
+    double* A_test = (double*)malloc(n * m * sizeof(double));
+ 
+ 
+ 
+    for(int i = 0; i < n; ++i) {
+        for(int j = 0; j < m; ++j) {
+            scanf("%lf", &A[j*n + i]);
+            A_test[j*n + i] = A[j*n + i];
+        }
+    }
+    for(int i = 0; i < n; ++i) {
+        for(int j = 0; j < k; ++j) {
+            scanf("%lf", &A[n*m + j*n + i]);
+            B_test[j*n+i] = A[n*m + j*n + i];
+        }
+    }
+ 
+ 
+ 
+    double* dev_A;
+    cudaMalloc(&dev_A, sizeof(double) * n*(m+k));
+    cudaMemcpy(dev_A, A, sizeof(double) * n*(m+k), cudaMemcpyHostToDevice);
+ 
+ 
+    AbsMax comp;
+    //Debug print
+    //printMatrix(A, n, m);
+    //printMatrix(A+n*m, n, k);
+ 
+    //printMatrixErr(A, n,m,k);
+    //printMatrixErr(A+n*m, n, k);
+ 
+ 
+    int cnt = 0;
+    //int colSize = n;
+ 
+    std::vector< int > stairs;
+    for(int i = 0; i < m; ++i) {
+        //cudaDeviceSynchronize();
+        //print<<<1,1>>>(dev_A, n, m, k);
+        cudaDeviceSynchronize();
+        thrust::device_ptr<double> p_arr = thrust::device_pointer_cast(dev_A);
+        int offset = i * n;
+        thrust::device_ptr<double> res = thrust::max_element(p_arr + i*n + cnt,
+                                                             p_arr + (i+1) * n,comp);
+        int j = (int)(res - (p_arr + offset));
+        double max = *res;
+        //cudaDeviceSynchronize();
+        //cudaMemcpy(&max, dev_A + (i*n + j), sizeof(double), cudaMemcpyDeviceToHost);
+        cudaDeviceSynchronize();
+ 
+        double cur = *(p_arr + i*n + cnt);
+        if(cnt == (n - 1) && fabs(cur) < ZERO) {
+            continue;
+        }
+ 
+        if(fabs(max) > ZERO) {
+ 
+            if(cnt != j) {
+                swapRows<<<N,N>>>(dev_A, n, m, k, cnt, j);
+                CSC(cudaGetLastError());
+            }
+ 
+            //printf("--------------SWAP--------------\n");
+            //printf("%d %d\n", cnt+1, j+1);
+            //cudaDeviceSynchronize();
+            //print<<<1,1>>>(dev_A, n, m, k);
+            //cudaDeviceSynchronize();
+ 
+ 
+            cudaDeviceSynchronize();
+            subtractForward<<<N,N>>>(dev_A, n, m, k, cnt, i);
+            CSC(cudaGetLastError());
+ 
+ 
+            //printf("--------------SUB--------------\n");
+            //          cudaDeviceSynchronize();
+            //          print<<<1,1>>>(dev_A, n, m, k);
+            //          cudaDeviceSynchronize();
+ 
+ 
+            cudaDeviceSynchronize();
+            //cudaMemset(dev_A + offset + cnt + 1, 0, (n - cnt - 1) * sizeof(double));
+            //cudaDeviceSynchronize();
+ 
+            stairs.push_back(cnt);
+            stairs.push_back(i);
+ 
+            cnt++;
+            if(cnt >= n || cnt >= m) {
+                break;
+            }
+        }
+ 
+    }
+    //print<<<1,1>>>(dev_A, n, m, k);
+    //cudaDeviceSynchronize();
+    //printf("=================================================================\n\n");
+ 
+    cudaDeviceSynchronize();
+    for(int i = (int)stairs.size() - 2; i >= 0; i -= 2) {
+        subtractBack1<<<N,N>>>(dev_A, n, m, k, stairs[i], stairs[i + 1]);
+        //printf("--------------SUB BACK--------------\n");
+        //          cudaDeviceSynchronize();
+        //          print<<<1,1>>>(dev_A, n, m, k);
+        //          cudaDeviceSynchronize();
+ 
+    }
+    CSC(cudaGetLastError());
+    cudaDeviceSynchronize();
+ 
+    cudaMemcpy(A1, dev_A, sizeof(double) * n*m, cudaMemcpyDeviceToHost);
+    cudaMemcpy(B1, dev_A + n*m, sizeof(double) * n*k, cudaMemcpyDeviceToHost);
+ 
+    cudaDeviceSynchronize();
+ 
+    double* res = (double*)malloc(sizeof(double) * m*k);
+ 
+ 
+    //printf("A = [");
+    //for(int i = 0; i < n; ++i) {
+    //  for(int j = 0; j < )
+    //}
+ 
+ 
+    int cnt1 = 0;
+    for(int z = 0; z < (int)stairs.size(); z += 2) {
+        int i = stairs[z];
+        int j = stairs[z + 1];
+        while(cnt1 < j) {
+            for(int x = 0; x < k; ++x) {
+                //res[x*m + cnt1] = 0.0;
+                printf("0.0000000000e+00 ");
+            }
+            printf("\n");
+            cnt1++;
+        }
+ 
+ 
+        for(int x = 0; x < k; ++x) {
+            //res[x*m + cnt1] = B1[x*n + i] / A1[j*n + i];
+            printf("%.10e ", B1[x*n + i] / A1[j*n + i]);
+        }
+        //printf("| %.4lf", A1[j*n + i]);
+        printf("\n");
+        cnt1++;
+    }
+    while(cnt1 < m) {
+        for(int x = 0; x < k; ++x) {
+            //res[x*m + cnt1] = 0.0;
+            printf("0.0000000000e+00 ");
+        }
+        printf("\n");
+        cnt1++;
+    }
+ 
+ 
+ 
+    //auto a = map_matrix(thrust::raw_pointer_cast(A1), n, m);
+    //auto x = map_matrix(thrust::raw_pointer_cast(res), m, k);
+    //auto a = map_matrix(thrust::raw_pointer_cast(A_test), n, m);
+    //auto b = map_matrix(thrust::raw_pointer_cast(B_test), n, k);
+    //auto b = map_matrix(thrust::raw_pointer_cast(B_test), n, k);
+    //std::cout << a << "\n\n" << b << "\n\n" << x << "\n\n-----------------------------------\n\n";
+    //auto kek = a * x;
+    //std::cout << kek;
+    //std::cout << "\n\n";
+    //std::cout << kek == b;
+    //std::cout << "\n\n";
+    //std::cout << kek(1,0) << "\n";
+ 
+    //for(int i = 0; i < m; ++i) {
+    //  for(int j = 0; j < k; ++j) {
+    //      if(fabs(kek(i,j) - b(i,j)) > 1e-9) {
+    //          std::cout << "Error: " << i << " " << j << " | " <<std::setprecision(10) << kek(i,j) << " "<<std::setprecision(10) << b(i,j) << "\n";
+    //      }
+    //  }
+    //}
+    cudaDeviceSynchronize();
+    //cudaFree(dev_stairs);
+    cudaFree(dev_A);
+    free(A);
+    free(A1);
+    free(B1);
+    free(A_test);
+    free(B_test);
+    free(res);
+    return 0;
+}

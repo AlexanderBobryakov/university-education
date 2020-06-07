@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+G:/Projects/CUDA/lab3/main.cu
+cmath
+-
+iostream
+-
+vector
+-
+stdio.h
+-
+stdlib.h
+-
+assert.h
+-
+

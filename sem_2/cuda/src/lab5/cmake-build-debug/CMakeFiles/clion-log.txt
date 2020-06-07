@@ -1,0 +1,21 @@
+"G:\Programs\CLion\CLion 2020.1\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.25.28610/bin/Hostx64/x64/nmake.exe" -G "CodeBlocks - NMake Makefiles" G:\Projects\CUDA\lab5
+-- The CUDA compiler identification is unknown
+CMake Error at CMakeLists.txt:2 (project):
+  The CMAKE_CUDA_COMPILER:
+
+    G:/Programs/CUDA/Development/bin/nvcc.exe
+
+  is not a full path to an existing compiler tool.
+
+  Tell CMake where to find the compiler by setting either the environment
+  variable "CUDACXX" or the CMake cache entry CMAKE_CUDA_COMPILER to the full
+  path to the compiler, or to the compiler name if it is in the PATH.
+
+
+-- Configuring incomplete, errors occurred!
+See also "G:/Projects/CUDA/lab5/cmake-build-debug/CMakeFiles/CMakeOutput.log".
+See also "G:/Projects/CUDA/lab5/cmake-build-debug/CMakeFiles/CMakeError.log".
+Cannot read G:\Projects\CUDA\lab5\cmake-build-debug\CMakeFiles\3.16.5\CMakeCUDACompiler.cmake
+
+Cannot get compiler information:
+	Cannot run program "G:\Programs\CUDA\Development\bin\nvcc.exe" (in directory "G:\Projects\CUDA\lab5\cmake-build-debug"): CreateProcess error=2, Не удается найти указанный файл

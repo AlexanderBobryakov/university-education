@@ -1,0 +1,3 @@
+G:/Projects/CUDA/lab3/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+G:/Projects/CUDA/lab3/cmake-build-debug/CMakeFiles/lab3.dir
+G:/Projects/CUDA/lab3/cmake-build-debug/CMakeFiles/edit_cache.dir

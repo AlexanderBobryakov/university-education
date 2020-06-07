@@ -1,0 +1,1 @@
+-nologo "tmp/a_dlink.obj" "tmp/CMakeCUDACompilerId.obj" -link -INCREMENTAL:NO   "/LIBPATH:G:/Programs/CUDA/Development/bin/../lib/x64"  cudadevrt.lib  cudart_static.lib

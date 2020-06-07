@@ -1,0 +1,1 @@
+-nologo -E -TP -D__CUDACC__ -D__NVCC__  "-IG:/Programs/CUDA/Development/bin/../include"    -D__CUDACC_VER_MAJOR__=10 -D__CUDACC_VER_MINOR__=2 -D__CUDACC_VER_BUILD__=89 -FI "cuda_runtime.h" -EHsc "CMakeCUDACompilerId.cu" 
