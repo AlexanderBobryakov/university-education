@@ -1,0 +1,71 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="8ACD67B7-6DB8-8D0B-1C23-4A74111A4336" name="DIM_OFFICE">
+<createdBy>Eugene</createdBy>
+<createdTime>2019-11-30 05:45:48 UTC</createdTime>
+<ownerDesignName>olap_sales</ownerDesignName>
+<ordsAlias>table_5</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="OFFICE_ID" id="6672DC1C-8A34-853C-DBAB-D29AED554341">
+<createdBy>Eugene</createdBy>
+<createdTime>2019-11-30 05:46:35 UTC</createdTime>
+<ownerDesignName>olap_sales</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="OFFICE_NAME" id="E757198E-79B4-8FDE-2EC9-590AEA6DCC3E">
+<createdBy>Eugene</createdBy>
+<createdTime>2019-11-30 05:46:35 UTC</createdTime>
+<ownerDesignName>olap_sales</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1000 CHAR</dataTypeSize>
+<ownDataTypeParameters>1000 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CITY_ID" id="3C7A445B-DE05-9AD3-A46C-61663DC34317">
+<createdBy>Eugene</createdBy>
+<createdTime>2019-11-30 05:55:30 UTC</createdTime>
+<ownerDesignName>olap_sales</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="45665A96-B06F-6E69-DEE6-5B43D1C8E27F" referredColumn="4D28072F-42B1-8221-6C64-34B15BFA9128"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="EF52E49C-B49B-E97E-A7CC-4EA955BD2282" name="DIM_OFFICE_PK">
+<createdBy>Eugene</createdBy>
+<createdTime>2019-11-30 05:46:35 UTC</createdTime>
+<ownerDesignName>olap_sales</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6672DC1C-8A34-853C-DBAB-D29AED554341"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2542DB4D-C5B2-8255-8C45-9E094ECEBBE6" name="DIM_OFFICE_DIM_CITY_FK">
+<createdBy>Eugene</createdBy>
+<createdTime>2019-11-30 05:55:30 UTC</createdTime>
+<ownerDesignName>olap_sales</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3C7A445B-DE05-9AD3-A46C-61663DC34317"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

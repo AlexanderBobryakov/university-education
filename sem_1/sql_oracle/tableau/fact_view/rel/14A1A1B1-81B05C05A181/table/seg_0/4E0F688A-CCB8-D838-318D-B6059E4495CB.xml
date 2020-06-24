@@ -1,0 +1,118 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="4E0F688A-CCB8-D838-318D-B6059E4495CB" name="FACT_VIEW">
+<createdBy>Алескандр</createdBy>
+<createdTime>2019-12-16 09:15:55 UTC</createdTime>
+<ownerDesignName>fact_view</ownerDesignName>
+<ordsAlias>table_6</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="fact_view_pk" id="1FC2E747-EEDF-67E8-4E51-6C235D502C86">
+<createdBy>Алескандр</createdBy>
+<createdTime>2019-12-16 09:17:33 UTC</createdTime>
+<ownerDesignName>fact_view</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="view_count" id="D44B1C8F-276D-7029-36E3-780A833DD541">
+<createdBy>Алескандр</createdBy>
+<createdTime>2019-12-16 09:17:50 UTC</createdTime>
+<ownerDesignName>fact_view</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DIM_POSTS_post_id" id="06920E93-81A0-37B5-0EB5-093835D3A22A">
+<createdBy>Алескандр</createdBy>
+<createdTime>2019-12-16 09:20:24 UTC</createdTime>
+<ownerDesignName>fact_view</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4FB86220-17DE-3F5B-C21C-A9688C3181AE" referredColumn="08F38F3C-E9AC-143B-B87D-C29D952AE02A"/>
+</associations>
+</Column>
+<Column name="DIM_DATE_DATE_ID" id="BB713910-EE87-2436-9540-72BD6965A354">
+<createdBy>Алескандр</createdBy>
+<createdTime>2019-12-16 09:20:39 UTC</createdTime>
+<ownerDesignName>fact_view</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6B28B5D7-35E0-AE31-6246-68134FF5AF25" referredColumn="9E4A12AD-61D5-C55C-65C6-B11171AF05BF"/>
+</associations>
+</Column>
+<Column name="DIM_TAGS_tag_id" id="D5CDDD2E-149A-F413-EEDB-6D59762E4845">
+<createdBy>Алескандр</createdBy>
+<createdTime>2019-12-16 09:20:43 UTC</createdTime>
+<ownerDesignName>fact_view</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6FAA0E66-0360-11F4-725D-249658129241" referredColumn="3F353794-B939-65B4-75DE-489A6DECDB75"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F9240413-A2B1-9957-323B-96C55F2ACF45" name="FACT_VIEW_PK">
+<createdBy>Алескандр</createdBy>
+<createdTime>2019-12-16 09:17:33 UTC</createdTime>
+<ownerDesignName>fact_view</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1FC2E747-EEDF-67E8-4E51-6C235D502C86"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0C063872-7DC8-FC5E-06BF-724C82F629F9" name="FACT_VIEW_DIM_POSTS_FK">
+<createdBy>Алескандр</createdBy>
+<createdTime>2019-12-16 09:20:24 UTC</createdTime>
+<ownerDesignName>fact_view</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="06920E93-81A0-37B5-0EB5-093835D3A22A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1F371475-387F-4A3F-5EA4-85370C9E87D0" name="FACT_VIEW_DIM_DATE_FK">
+<createdBy>Алескандр</createdBy>
+<createdTime>2019-12-16 09:20:39 UTC</createdTime>
+<ownerDesignName>fact_view</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BB713910-EE87-2436-9540-72BD6965A354"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1680D294-3C22-B697-326F-23C3B3C99FFE" name="FACT_VIEW_DIM_TAGS_FK">
+<createdBy>Алескандр</createdBy>
+<createdTime>2019-12-16 09:20:43 UTC</createdTime>
+<ownerDesignName>fact_view</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D5CDDD2E-149A-F413-EEDB-6D59762E4845"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

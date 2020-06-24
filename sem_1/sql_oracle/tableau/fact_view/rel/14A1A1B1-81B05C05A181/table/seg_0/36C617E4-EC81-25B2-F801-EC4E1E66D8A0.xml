@@ -1,0 +1,58 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="36C617E4-EC81-25B2-F801-EC4E1E66D8A0" name="DIM_DATE">
+<createdBy>Алескандр</createdBy>
+<createdTime>2019-12-16 08:59:04 UTC</createdTime>
+<ownerDesignName>fact_view</ownerDesignName>
+<ordsAlias>table_6</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="DATE_ID" id="9E4A12AD-61D5-C55C-65C6-B11171AF05BF">
+<createdBy>Алескандр</createdBy>
+<createdTime>2019-12-16 08:59:04 UTC</createdTime>
+<ownerDesignName>fact_view</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DATE_NAME" id="6144D1DC-9559-000D-1221-DA2E2FA6C41E">
+<createdBy>Алескандр</createdBy>
+<createdTime>2019-12-16 08:59:04 UTC</createdTime>
+<ownerDesignName>fact_view</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LEVEL" id="57392596-65FE-6CBA-0F8C-829BE338C216">
+<createdBy>Алескандр</createdBy>
+<createdTime>2019-12-16 08:59:04 UTC</createdTime>
+<ownerDesignName>fact_view</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="804C0D90-50E2-355E-6C4D-2A1A9202EED8" name="DIM_DATE_PK">
+<createdBy>Алескандр</createdBy>
+<createdTime>2019-12-16 08:59:04 UTC</createdTime>
+<ownerDesignName>fact_view</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9E4A12AD-61D5-C55C-65C6-B11171AF05BF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

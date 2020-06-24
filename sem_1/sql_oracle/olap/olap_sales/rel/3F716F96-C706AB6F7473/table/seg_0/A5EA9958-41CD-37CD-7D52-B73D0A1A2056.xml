@@ -1,0 +1,47 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A5EA9958-41CD-37CD-7D52-B73D0A1A2056" name="DIM_COUNTRY">
+<createdBy>Eugene</createdBy>
+<createdTime>2019-11-30 05:43:01 UTC</createdTime>
+<ownerDesignName>olap_sales</ownerDesignName>
+<ordsAlias>table_3</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="COUNTRY_ID" id="B8D8312F-A68D-F241-2085-44491324F78F">
+<createdBy>Eugene</createdBy>
+<createdTime>2019-11-30 05:44:09 UTC</createdTime>
+<ownerDesignName>olap_sales</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="COUNTRY_NAME" id="5BFAF8D3-9282-D3A6-B1A8-26793DB18B46">
+<createdBy>Eugene</createdBy>
+<createdTime>2019-11-30 05:44:09 UTC</createdTime>
+<ownerDesignName>olap_sales</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1000 CHAR</dataTypeSize>
+<ownDataTypeParameters>1000 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="29654D18-905E-4059-B702-B620EF1DC1F7" name="DIM_COUNTRY_PK">
+<createdBy>Eugene</createdBy>
+<createdTime>2019-11-30 05:44:09 UTC</createdTime>
+<ownerDesignName>olap_sales</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B8D8312F-A68D-F241-2085-44491324F78F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

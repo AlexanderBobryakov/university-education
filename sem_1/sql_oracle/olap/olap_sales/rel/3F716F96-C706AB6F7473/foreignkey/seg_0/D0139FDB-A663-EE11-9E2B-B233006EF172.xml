@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="D0139FDB-A663-EE11-9E2B-B233006EF172" containerWithKeyObject="4FAAFBF6-276C-46DD-0C62-33393380D71B" localFKIndex="83A33734-9E06-5B9D-32AF-790034C86E82" name="FACT_SALES_DIM_CITY_FK">
+<createdBy>Eugene</createdBy>
+<createdTime>2019-11-30 05:51:33 UTC</createdTime>
+<ownerDesignName>olap_sales</ownerDesignName>
+<referredTableLongName>DIM_CITY</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>AC292409-DA1A-7339-944D-ECAF2F59587B</referredTableID>
+<keyObject>5CB6D4A4-1118-EF0B-1848-3F52A8B85737</keyObject>
+<referredKeyID>5CB6D4A4-1118-EF0B-1848-3F52A8B85737</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>CITY_ID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

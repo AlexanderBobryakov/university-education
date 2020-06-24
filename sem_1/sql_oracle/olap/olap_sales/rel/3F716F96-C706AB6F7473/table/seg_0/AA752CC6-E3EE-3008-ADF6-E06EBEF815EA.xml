@@ -1,0 +1,59 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="AA752CC6-E3EE-3008-ADF6-E06EBEF815EA" name="DIM_MANAGER">
+<createdBy>Eugene</createdBy>
+<createdTime>2019-11-30 05:41:50 UTC</createdTime>
+<ownerDesignName>olap_sales</ownerDesignName>
+<ordsAlias>table_2</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="MANAGER_ID" id="E8DACB0F-78B5-7C6F-95A2-013B926CE6D4">
+<createdBy>Eugene</createdBy>
+<createdTime>2019-11-30 05:42:56 UTC</createdTime>
+<ownerDesignName>olap_sales</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FIRST_NAME" id="949FF1DC-FE63-8799-6ED5-3BD78850482D">
+<createdBy>Eugene</createdBy>
+<createdTime>2019-11-30 05:42:56 UTC</createdTime>
+<ownerDesignName>olap_sales</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1000 CHAR</dataTypeSize>
+<ownDataTypeParameters>1000 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LAST_NAME" id="1D7BF566-49E3-9161-9A37-28E0DEA06AB3">
+<createdBy>Eugene</createdBy>
+<createdTime>2019-11-30 05:42:56 UTC</createdTime>
+<ownerDesignName>olap_sales</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1000 CHAR</dataTypeSize>
+<ownDataTypeParameters>1000 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="BEB1E4D8-3DB0-347F-3767-31AABC4FEC3C" name="DIM_MANAGER_PK">
+<createdBy>Eugene</createdBy>
+<createdTime>2019-11-30 05:50:16 UTC</createdTime>
+<ownerDesignName>olap_sales</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E8DACB0F-78B5-7C6F-95A2-013B926CE6D4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

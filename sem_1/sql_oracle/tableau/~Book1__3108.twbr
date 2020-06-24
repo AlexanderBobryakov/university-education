@@ -1,0 +1,603 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20194.19.1010.1202                               -->
+<workbook source-build='2019.4.0 (20194.19.1010.1202)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <SheetIdentifierTracking ignorable='true' predowngraded='true' />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='FACT_VIEW (ALEX)' inline='true' name='federated.1g9avwl08ft59o1gevbwu0ig3yi3' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='localhost' name='oracle.1msj1580b270z611wyz0y0crpt39'>
+            <connection authentication='RDBMS' class='oracle' one-time-sql='' port='1521' schema='ALEX' server='localhost' service='ORCL' sslmode='' username='alex' />
+          </named-connection>
+        </named-connections>
+        <relation join='inner' type='join'>
+          <clause type='join'>
+            <expression op='='>
+              <expression op='[FACT_VIEW].[DIM_DATE_DATE_ID]' />
+              <expression op='[DIM_DATE].[DATE_ID]' />
+            </expression>
+          </clause>
+          <relation join='inner' type='join'>
+            <clause type='join'>
+              <expression op='='>
+                <expression op='[FACT_VIEW].[DIM_TAGS_TAG_ID]' />
+                <expression op='[DIM_TAGS].[TAG_ID]' />
+              </expression>
+            </clause>
+            <relation join='inner' type='join'>
+              <clause type='join'>
+                <expression op='='>
+                  <expression op='[FACT_VIEW].[DIM_POSTS_POST_ID]' />
+                  <expression op='[DIM_POSTS].[POST_ID]' />
+                </expression>
+              </clause>
+              <relation connection='oracle.1msj1580b270z611wyz0y0crpt39' name='FACT_VIEW' table='[ALEX].[FACT_VIEW]' type='table' />
+              <relation connection='oracle.1msj1580b270z611wyz0y0crpt39' name='DIM_POSTS' table='[ALEX].[DIM_POSTS]' type='table' />
+            </relation>
+            <relation connection='oracle.1msj1580b270z611wyz0y0crpt39' name='DIM_TAGS' table='[ALEX].[DIM_TAGS]' type='table' />
+          </relation>
+          <relation connection='oracle.1msj1580b270z611wyz0y0crpt39' name='DIM_DATE' table='[ALEX].[DIM_DATE]' type='table' />
+        </relation>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>FACT_VIEW_PK</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[FACT_VIEW_PK]</local-name>
+            <parent-name>[FACT_VIEW]</parent-name>
+            <remote-alias>FACT_VIEW_PK</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>38</precision>
+            <scale>0</scale>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_NUM&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>VIEW_COUNT</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[VIEW_COUNT]</local-name>
+            <parent-name>[FACT_VIEW]</parent-name>
+            <remote-alias>VIEW_COUNT</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>38</precision>
+            <scale>0</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_NUM&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DIM_POSTS_POST_ID</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[DIM_POSTS_POST_ID]</local-name>
+            <parent-name>[FACT_VIEW]</parent-name>
+            <remote-alias>DIM_POSTS_POST_ID</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>38</precision>
+            <scale>0</scale>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_NUM&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DIM_DATE_DATE_ID</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[DIM_DATE_DATE_ID]</local-name>
+            <parent-name>[FACT_VIEW]</parent-name>
+            <remote-alias>DIM_DATE_DATE_ID</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>38</precision>
+            <scale>0</scale>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_NUM&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DIM_TAGS_TAG_ID</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[DIM_TAGS_TAG_ID]</local-name>
+            <parent-name>[FACT_VIEW]</parent-name>
+            <remote-alias>DIM_TAGS_TAG_ID</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>38</precision>
+            <scale>0</scale>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_NUM&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>POST_ID</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[POST_ID]</local-name>
+            <parent-name>[DIM_POSTS]</parent-name>
+            <remote-alias>POST_ID</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>38</precision>
+            <scale>0</scale>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_NUM&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>POST_NAME</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[POST_NAME]</local-name>
+            <parent-name>[DIM_POSTS]</parent-name>
+            <remote-alias>POST_NAME</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>0</scale>
+            <width>1000</width>
+            <contains-null>true</contains-null>
+            <collation charset='1' flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_CHR{charset=873,charform=1}&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TAG_ID</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[TAG_ID]</local-name>
+            <parent-name>[DIM_TAGS]</parent-name>
+            <remote-alias>TAG_ID</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>38</precision>
+            <scale>0</scale>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_NUM&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TAG_NAME</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[TAG_NAME]</local-name>
+            <parent-name>[DIM_TAGS]</parent-name>
+            <remote-alias>TAG_NAME</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>0</scale>
+            <width>1000</width>
+            <contains-null>true</contains-null>
+            <collation charset='1' flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_CHR{charset=873,charform=1}&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DATE_ID</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[DATE_ID]</local-name>
+            <parent-name>[DIM_DATE]</parent-name>
+            <remote-alias>DATE_ID</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>38</precision>
+            <scale>0</scale>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_NUM&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DATE_NAME</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[DATE_NAME]</local-name>
+            <parent-name>[DIM_DATE]</parent-name>
+            <remote-alias>DATE_NAME</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>0</scale>
+            <width>100</width>
+            <contains-null>true</contains-null>
+            <collation charset='1' flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_CHR{charset=873,charform=1}&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>LEVEL</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[LEVEL]</local-name>
+            <parent-name>[DIM_DATE]</parent-name>
+            <remote-alias>LEVEL</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>38</precision>
+            <scale>0</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQLT_NUM&quot;</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <column aggregation='Sum' datatype='real' name='[DATE_ID]' role='dimension' type='quantitative' />
+      <column aggregation='Sum' datatype='real' name='[DIM_DATE_DATE_ID]' role='dimension' type='quantitative' />
+      <column aggregation='Sum' datatype='real' name='[DIM_POSTS_POST_ID]' role='dimension' type='quantitative' />
+      <column aggregation='Sum' datatype='real' name='[DIM_TAGS_TAG_ID]' role='dimension' type='quantitative' />
+      <column aggregation='Sum' datatype='real' name='[FACT_VIEW_PK]' role='dimension' type='ordinal' />
+      <column aggregation='Sum' datatype='real' name='[LEVEL]' role='dimension' type='ordinal' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column aggregation='Sum' datatype='real' name='[POST_ID]' role='dimension' type='quantitative' />
+      <column aggregation='Sum' datatype='real' name='[TAG_ID]' role='dimension' type='quantitative' />
+      <column datatype='string' name='[TAG_NAME]' role='dimension' type='nominal' />
+      <column-instance column='[TAG_NAME]' derivation='None' name='[none:TAG_NAME:nk]' pivot='key' type='nominal' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.784679' measure-ordering='alphabetic' measure-percentage='0.215321' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:TAG_NAME:nk]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;asp.net-mvc&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;node.js&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;xml&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;.htaccess&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;ios&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;ubuntu&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;файлы&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;android-studio&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;json&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;winforms&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;c++&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;python&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;веб-программирование&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;bootstrap&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;objective-c&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;yii2&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;angularjs&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;laravel&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;wordpress&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;html&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;sql-server&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;регулярные-выражения&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;.net&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;java&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;unity3d&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;django&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;spring&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;ооп&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;apache&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;linux&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;wpf&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;css&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;python-3.x&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;вёрстка&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;css3&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;qt&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;массивы&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;git&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;sql&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;парсер&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;html5&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;swift&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;строки&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;c&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;php&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;алгоритм&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;asp.net&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;mysql&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;xcode&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;ajax&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;javascript&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;visual-studio&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;delphi&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;reactjs&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;многопоточность&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;c\#&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;postgresql&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;база-данных&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;android&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;jquery&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;windows&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Russia&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='FACT_VIEW (ALEX)' name='federated.1g9avwl08ft59o1gevbwu0ig3yi3' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1g9avwl08ft59o1gevbwu0ig3yi3'>
+            <column datatype='string' name='[POST_NAME]' role='dimension' type='nominal' />
+            <column datatype='real' name='[VIEW_COUNT]' role='measure' type='quantitative' />
+            <column-instance column='[POST_NAME]' derivation='None' name='[none:POST_NAME:nk]' pivot='key' type='nominal' />
+            <column-instance column='[VIEW_COUNT]' derivation='Sum' name='[sum:VIEW_COUNT:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.1g9avwl08ft59o1gevbwu0ig3yi3].[none:POST_NAME:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.1g9avwl08ft59o1gevbwu0ig3yi3].[sum:VIEW_COUNT:qk]' shelf='rows' />
+          </shelf-sorts>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.1g9avwl08ft59o1gevbwu0ig3yi3].[none:POST_NAME:nk]</rows>
+        <cols>[federated.1g9avwl08ft59o1gevbwu0ig3yi3].[sum:VIEW_COUNT:qk]</cols>
+      </table>
+      <simple-id uuid='{029826F0-0F0D-40DC-82E6-6FDB72BBDFBB}' />
+    </worksheet>
+    <worksheet name='Sheet 2'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='FACT_VIEW (ALEX)' name='federated.1g9avwl08ft59o1gevbwu0ig3yi3' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1g9avwl08ft59o1gevbwu0ig3yi3'>
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column datatype='string' name='[TAG_NAME]' role='dimension' type='nominal' />
+            <column-instance column='[TAG_NAME]' derivation='None' name='[none:TAG_NAME:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.1g9avwl08ft59o1gevbwu0ig3yi3].[sum:Number of Records:qk]' included-values='in-range'>
+            <min>15418</min>
+            <max>33115</max>
+          </filter>
+          <slices>
+            <column>[federated.1g9avwl08ft59o1gevbwu0ig3yi3].[sum:Number of Records:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='size-bar' field='[federated.1g9avwl08ft59o1gevbwu0ig3yi3].[sum:Number of Records:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <size column='[federated.1g9avwl08ft59o1gevbwu0ig3yi3].[sum:Number of Records:qk]' />
+              <text column='[federated.1g9avwl08ft59o1gevbwu0ig3yi3].[none:TAG_NAME:nk]' />
+              <color column='[federated.1g9avwl08ft59o1gevbwu0ig3yi3].[none:TAG_NAME:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{740630ED-F340-4CA3-B896-222A2953F81F}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{B74D4088-0B2D-46CA-A293-9699069663F9}' />
+    </window>
+    <window class='worksheet' name='Sheet 2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1g9avwl08ft59o1gevbwu0ig3yi3].[none:TAG_NAME:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{767F46B0-A63F-42AA-AD4D-6E1B6357C316}' />
+    </window>
+  </windows>
+</workbook>

@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="fact_view" id="F2315CF6-3223-F7CF-999A-D206E2C8D04E" version="3.5">
+<createdBy>Алескандр</createdBy>
+<createdTime>2019-12-16 08:58:35 UTC</createdTime>
+<ownerDesignName>fact_view</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>F2315CF6-3223-F7CF-999A-D206E2C8D04E</designId>
+</OSDM_Design>

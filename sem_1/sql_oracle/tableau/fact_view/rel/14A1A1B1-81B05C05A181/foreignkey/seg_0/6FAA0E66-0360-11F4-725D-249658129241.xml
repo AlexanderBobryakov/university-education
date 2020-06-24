@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="6FAA0E66-0360-11F4-725D-249658129241" containerWithKeyObject="4E0F688A-CCB8-D838-318D-B6059E4495CB" localFKIndex="1680D294-3C22-B697-326F-23C3B3C99FFE" name="FACT_VIEW_DIM_TAGS_FK">
+<createdBy>Алескандр</createdBy>
+<createdTime>2019-12-16 09:20:43 UTC</createdTime>
+<ownerDesignName>fact_view</ownerDesignName>
+<referredTableLongName>DIM_TAGS</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>49132409-D6D2-56EF-95DB-6DB8FD67485C</referredTableID>
+<keyObject>666221D0-690C-8058-03EF-DEC80B2C519F</keyObject>
+<referredKeyID>666221D0-690C-8058-03EF-DEC80B2C519F</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>tag_id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

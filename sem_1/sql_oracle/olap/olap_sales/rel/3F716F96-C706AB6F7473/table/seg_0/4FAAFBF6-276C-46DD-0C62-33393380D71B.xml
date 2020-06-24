@@ -1,0 +1,218 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="4FAAFBF6-276C-46DD-0C62-33393380D71B" name="FACT_SALES">
+<createdBy>Eugene</createdBy>
+<createdTime>2019-11-29 22:11:21 UTC</createdTime>
+<ownerDesignName>olap_sales</ownerDesignName>
+<ordsAlias>table_1</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="SALE_ID" id="BE64254A-3B3E-6C33-6011-FB5529F934FB">
+<createdBy>Eugene</createdBy>
+<createdTime>2019-11-30 06:00:37 UTC</createdTime>
+<ownerDesignName>olap_sales</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PRODUCT_ID" id="84AECABC-C09F-EBA5-561E-1EA1A347A80F">
+<createdBy>Eugene</createdBy>
+<createdTime>2019-11-30 05:50:26 UTC</createdTime>
+<ownerDesignName>olap_sales</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="097D4D6F-BFAC-F8C7-7E11-B0F9ED82103F" referredColumn="13636CE9-E408-6273-E8D1-515A4FF589B9"/>
+</associations>
+</Column>
+<Column name="MANAGER_ID" id="3EACDF3E-DD1D-1656-0F33-857D47DCB030">
+<createdBy>Eugene</createdBy>
+<createdTime>2019-11-30 05:51:18 UTC</createdTime>
+<ownerDesignName>olap_sales</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="BE783A06-73CA-14E8-59E5-6E3D939E5397" referredColumn="E8DACB0F-78B5-7C6F-95A2-013B926CE6D4"/>
+</associations>
+</Column>
+<Column name="COUNTRY_ID" id="33667084-E857-040D-4A79-AC9C27C63C5B">
+<createdBy>Eugene</createdBy>
+<createdTime>2019-11-30 05:51:27 UTC</createdTime>
+<ownerDesignName>olap_sales</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="DD52BCC9-FB11-EBA1-8DAD-84ADA17FFD9F" referredColumn="B8D8312F-A68D-F241-2085-44491324F78F"/>
+</associations>
+</Column>
+<Column name="CITY_ID" id="A6DC480F-35E8-4819-44C1-4B55084F031D">
+<createdBy>Eugene</createdBy>
+<createdTime>2019-11-30 05:51:33 UTC</createdTime>
+<ownerDesignName>olap_sales</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D0139FDB-A663-EE11-9E2B-B233006EF172" referredColumn="4D28072F-42B1-8221-6C64-34B15BFA9128"/>
+</associations>
+</Column>
+<Column name="OFFICE_ID" id="77DAA973-2E31-1553-6810-216B40E61A52">
+<createdBy>Eugene</createdBy>
+<createdTime>2019-11-30 05:53:44 UTC</createdTime>
+<ownerDesignName>olap_sales</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="78AEB2E6-6969-68B0-2F87-0999C24DB701" referredColumn="6672DC1C-8A34-853C-DBAB-D29AED554341"/>
+</associations>
+</Column>
+<Column name="DATE_ID" id="19C358C3-B3B4-3896-EE7A-6446FBCF96E8">
+<createdBy>Eugene</createdBy>
+<createdTime>2019-11-30 05:53:51 UTC</createdTime>
+<ownerDesignName>olap_sales</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7CEDE3E2-A4BA-F3C9-A505-0F7A0B6DA37C" referredColumn="83243567-AEF5-B76F-7422-5F7BD9014028"/>
+</associations>
+</Column>
+<Column name="SALE_AMOUNT" id="5D090605-470A-AB7B-3104-FC5A74ED35B6">
+<createdBy>Eugene</createdBy>
+<createdTime>2019-11-30 06:00:37 UTC</createdTime>
+<ownerDesignName>olap_sales</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>38</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,38,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SALE_PRICE" id="EF06139E-6D67-214D-B4E7-6D0BA51ECE0E">
+<createdBy>Eugene</createdBy>
+<createdTime>2019-11-30 06:00:37 UTC</createdTime>
+<ownerDesignName>olap_sales</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>38</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,38,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SALE_QTY" id="7D447FEC-AACC-00DA-118E-D8BFF839D955">
+<createdBy>Eugene</createdBy>
+<createdTime>2019-11-30 06:00:37 UTC</createdTime>
+<ownerDesignName>olap_sales</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>38</dataTypePrecision>
+<dataTypeScale>5</dataTypeScale>
+<ownDataTypeParameters>,38,5</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="6EFC863F-02DA-3858-906E-221418F727CE" name="FACT_SALES_PK">
+<createdBy>Eugene</createdBy>
+<createdTime>2019-11-30 06:00:37 UTC</createdTime>
+<ownerDesignName>olap_sales</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BE64254A-3B3E-6C33-6011-FB5529F934FB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4EE27B55-0988-38A8-0535-93291600B5F0" name="FACT_SALES_DIM_PRODUCT_FK">
+<createdBy>Eugene</createdBy>
+<createdTime>2019-11-30 05:50:26 UTC</createdTime>
+<ownerDesignName>olap_sales</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="84AECABC-C09F-EBA5-561E-1EA1A347A80F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="56B1140F-6A8C-B682-A0D7-FCC8322323A8" name="FACT_SALES_DIM_MANAGER_FK">
+<createdBy>Eugene</createdBy>
+<createdTime>2019-11-30 05:51:18 UTC</createdTime>
+<ownerDesignName>olap_sales</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3EACDF3E-DD1D-1656-0F33-857D47DCB030"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="01999286-93E9-F807-2ABD-9AFFBC8C513A" name="FACT_SALES_DIM_COUNTRY_FK">
+<createdBy>Eugene</createdBy>
+<createdTime>2019-11-30 05:51:27 UTC</createdTime>
+<ownerDesignName>olap_sales</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="33667084-E857-040D-4A79-AC9C27C63C5B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="83A33734-9E06-5B9D-32AF-790034C86E82" name="FACT_SALES_DIM_CITY_FK">
+<createdBy>Eugene</createdBy>
+<createdTime>2019-11-30 05:51:33 UTC</createdTime>
+<ownerDesignName>olap_sales</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A6DC480F-35E8-4819-44C1-4B55084F031D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DABA00DE-977D-44C4-DFDA-436393A3FCA0" name="FACT_SALES_DIM_OFFICE_FK">
+<createdBy>Eugene</createdBy>
+<createdTime>2019-11-30 05:53:44 UTC</createdTime>
+<ownerDesignName>olap_sales</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="77DAA973-2E31-1553-6810-216B40E61A52"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E2D0DD63-16D4-CDB1-A581-1798EBAB0A1D" name="FACT_SALES_DIM_DATE_FK">
+<createdBy>Eugene</createdBy>
+<createdTime>2019-11-30 05:53:51 UTC</createdTime>
+<ownerDesignName>olap_sales</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="19C358C3-B3B4-3896-EE7A-6446FBCF96E8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
