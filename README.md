@@ -2,7 +2,7 @@
 Проекты по университету (МГТУ, МГУ, МАИ, МФТИ).
 
 Семестр 1: 
-1) Введение в python (machine learning + курсовая "Wavelet анализ") source:python_ml/
+1) Введение в python (machine learning + курсовая "Wavelet анализ")
 2) Scala
 3) Sql Oracle (basic + аналитические функции + OLAP (визуализация на Tableau))
 
