@@ -1,0 +1,11 @@
+products:
+   D:\Projects\Mai\Scala\lession9\src\test\scala\org\mai\dep110\scala\MainSpec.scala -> D:\Projects\Mai\Scala\lession9\target\test-classes\org\mai\dep110\scala\MianSpec.class
+binary dependencies:
+   D:\Projects\Mai\Scala\lession9\src\test\scala\org\mai\dep110\scala\MainSpec.scala -> C:\Program Files (x86)\Java\jdk1.8.0_231\jre\lib\rt.jar
+   D:\Projects\Mai\Scala\lession9\src\test\scala\org\mai\dep110\scala\MainSpec.scala -> C:\Users\Алескандр\.m2\repository\org\scala-lang\scala-library\2.12.8\scala-library-2.12.8.jar
+   D:\Projects\Mai\Scala\lession9\src\test\scala\org\mai\dep110\scala\MainSpec.scala -> C:\Users\Алескандр\.m2\repository\org\scalactic\scalactic_2.12\3.0.4\scalactic_2.12-3.0.4.jar
+   D:\Projects\Mai\Scala\lession9\src\test\scala\org\mai\dep110\scala\MainSpec.scala -> C:\Users\Алескандр\.m2\repository\org\scalatest\scalatest_2.12\3.0.4\scalatest_2.12-3.0.4.jar
+source dependencies:
+external dependencies:
+class names:
+   D:\Projects\Mai\Scala\lession9\src\test\scala\org\mai\dep110\scala\MainSpec.scala -> org.mai.dep110.scala.MianSpec

@@ -1,0 +1,81 @@
+products:
+   D:\Projects\Mai\Scala\lession9\src\main\scala\org\mai\dep110\scala\collections\Main.scala -> D:\Projects\Mai\Scala\lession9\target\classes\org\mai\dep110\scala\collections\Main$.class
+   D:\Projects\Mai\Scala\lession9\src\main\scala\org\mai\dep110\scala\collections\Main.scala -> D:\Projects\Mai\Scala\lession9\target\classes\org\mai\dep110\scala\collections\Main$delayedInit$body.class
+   D:\Projects\Mai\Scala\lession9\src\main\scala\org\mai\dep110\scala\collections\Main.scala -> D:\Projects\Mai\Scala\lession9\target\classes\org\mai\dep110\scala\collections\Main.class
+   D:\Projects\Mai\Scala\lession9\src\main\scala\org\mai\dep110\scala\collections\Main.scala -> D:\Projects\Mai\Scala\lession9\target\classes\org\mai\dep110\scala\collections\Person$.class
+   D:\Projects\Mai\Scala\lession9\src\main\scala\org\mai\dep110\scala\collections\Main.scala -> D:\Projects\Mai\Scala\lession9\target\classes\org\mai\dep110\scala\collections\Person.class
+   D:\Projects\Mai\Scala\lession9\src\main\scala\org\mai\dep110\scala\collections\Main.scala -> D:\Projects\Mai\Scala\lession9\target\classes\org\mai\dep110\scala\collections\Sex$.class
+   D:\Projects\Mai\Scala\lession9\src\main\scala\org\mai\dep110\scala\collections\Main.scala -> D:\Projects\Mai\Scala\lession9\target\classes\org\mai\dep110\scala\collections\Sex.class
+   D:\Projects\Mai\Scala\lession9\src\main\scala\org\mai\dep110\scala\implicits\ImplicitClass.scala -> D:\Projects\Mai\Scala\lession9\target\classes\org\mai\dep110\scala\implicits\ImplicitClass$.class
+   D:\Projects\Mai\Scala\lession9\src\main\scala\org\mai\dep110\scala\implicits\ImplicitClass.scala -> D:\Projects\Mai\Scala\lession9\target\classes\org\mai\dep110\scala\implicits\ImplicitClass$StringToIris.class
+   D:\Projects\Mai\Scala\lession9\src\main\scala\org\mai\dep110\scala\implicits\ImplicitClass.scala -> D:\Projects\Mai\Scala\lession9\target\classes\org\mai\dep110\scala\implicits\ImplicitClass$delayedInit$body.class
+   D:\Projects\Mai\Scala\lession9\src\main\scala\org\mai\dep110\scala\implicits\ImplicitClass.scala -> D:\Projects\Mai\Scala\lession9\target\classes\org\mai\dep110\scala\implicits\ImplicitClass.class
+   D:\Projects\Mai\Scala\lession9\src\main\scala\org\mai\dep110\scala\implicits\ImplicitClass.scala -> D:\Projects\Mai\Scala\lession9\target\classes\org\mai\dep110\scala\implicits\Iris$.class
+   D:\Projects\Mai\Scala\lession9\src\main\scala\org\mai\dep110\scala\implicits\ImplicitClass.scala -> D:\Projects\Mai\Scala\lession9\target\classes\org\mai\dep110\scala\implicits\Iris.class
+   D:\Projects\Mai\Scala\lession9\src\main\scala\org\mai\dep110\scala\implicits\ImplicitParameter.scala -> D:\Projects\Mai\Scala\lession9\target\classes\org\mai\dep110\scala\implicits\Abonent$.class
+   D:\Projects\Mai\Scala\lession9\src\main\scala\org\mai\dep110\scala\implicits\ImplicitParameter.scala -> D:\Projects\Mai\Scala\lession9\target\classes\org\mai\dep110\scala\implicits\Abonent.class
+   D:\Projects\Mai\Scala\lession9\src\main\scala\org\mai\dep110\scala\implicits\ImplicitParameter.scala -> D:\Projects\Mai\Scala\lession9\target\classes\org\mai\dep110\scala\implicits\ImplicitParameter$.class
+   D:\Projects\Mai\Scala\lession9\src\main\scala\org\mai\dep110\scala\implicits\ImplicitParameter.scala -> D:\Projects\Mai\Scala\lession9\target\classes\org\mai\dep110\scala\implicits\ImplicitParameter$delayedInit$body.class
+   D:\Projects\Mai\Scala\lession9\src\main\scala\org\mai\dep110\scala\implicits\ImplicitParameter.scala -> D:\Projects\Mai\Scala\lession9\target\classes\org\mai\dep110\scala\implicits\ImplicitParameter.class
+   D:\Projects\Mai\Scala\lession9\src\main\scala\org\mai\dep110\scala\iris\IrisExample.scala -> D:\Projects\Mai\Scala\lession9\target\classes\org\mai\dep110\scala\iris\Iris$.class
+   D:\Projects\Mai\Scala\lession9\src\main\scala\org\mai\dep110\scala\iris\IrisExample.scala -> D:\Projects\Mai\Scala\lession9\target\classes\org\mai\dep110\scala\iris\Iris.class
+   D:\Projects\Mai\Scala\lession9\src\main\scala\org\mai\dep110\scala\iris\IrisExample.scala -> D:\Projects\Mai\Scala\lession9\target\classes\org\mai\dep110\scala\iris\IrisExample$.class
+   D:\Projects\Mai\Scala\lession9\src\main\scala\org\mai\dep110\scala\iris\IrisExample.scala -> D:\Projects\Mai\Scala\lession9\target\classes\org\mai\dep110\scala\iris\IrisExample$StringToIris.class
+   D:\Projects\Mai\Scala\lession9\src\main\scala\org\mai\dep110\scala\iris\IrisExample.scala -> D:\Projects\Mai\Scala\lession9\target\classes\org\mai\dep110\scala\iris\IrisExample$delayedInit$body.class
+   D:\Projects\Mai\Scala\lession9\src\main\scala\org\mai\dep110\scala\iris\IrisExample.scala -> D:\Projects\Mai\Scala\lession9\target\classes\org\mai\dep110\scala\iris\IrisExample.class
+   D:\Projects\Mai\Scala\lession9\src\main\scala\org\mai\dep110\scala\iris\IrisExample.scala -> D:\Projects\Mai\Scala\lession9\target\classes\org\mai\dep110\scala\iris\PetalSize$.class
+   D:\Projects\Mai\Scala\lession9\src\main\scala\org\mai\dep110\scala\iris\IrisExample.scala -> D:\Projects\Mai\Scala\lession9\target\classes\org\mai\dep110\scala\iris\PetalSize.class
+   D:\Projects\Mai\Scala\lession9\src\main\scala\org\mai\dep110\scala\patternMatching\Main.scala -> D:\Projects\Mai\Scala\lession9\target\classes\org\mai\dep110\scala\patternMatching\Dog$.class
+   D:\Projects\Mai\Scala\lession9\src\main\scala\org\mai\dep110\scala\patternMatching\Main.scala -> D:\Projects\Mai\Scala\lession9\target\classes\org\mai\dep110\scala\patternMatching\Dog.class
+   D:\Projects\Mai\Scala\lession9\src\main\scala\org\mai\dep110\scala\patternMatching\Main.scala -> D:\Projects\Mai\Scala\lession9\target\classes\org\mai\dep110\scala\patternMatching\Main$.class
+   D:\Projects\Mai\Scala\lession9\src\main\scala\org\mai\dep110\scala\patternMatching\Main.scala -> D:\Projects\Mai\Scala\lession9\target\classes\org\mai\dep110\scala\patternMatching\Main$delayedInit$body.class
+   D:\Projects\Mai\Scala\lession9\src\main\scala\org\mai\dep110\scala\patternMatching\Main.scala -> D:\Projects\Mai\Scala\lession9\target\classes\org\mai\dep110\scala\patternMatching\Main.class
+   D:\Projects\Mai\Scala\lession9\src\main\scala\org\mai\dep110\scala\patternMatching\Main.scala -> D:\Projects\Mai\Scala\lession9\target\classes\org\mai\dep110\scala\patternMatching\Person$.class
+   D:\Projects\Mai\Scala\lession9\src\main\scala\org\mai\dep110\scala\patternMatching\Main.scala -> D:\Projects\Mai\Scala\lession9\target\classes\org\mai\dep110\scala\patternMatching\Person.class
+binary dependencies:
+   D:\Projects\Mai\Scala\lession9\src\main\scala\org\mai\dep110\scala\collections\Main.scala -> C:\Program Files (x86)\Java\jdk1.8.0_231\jre\lib\rt.jar
+   D:\Projects\Mai\Scala\lession9\src\main\scala\org\mai\dep110\scala\collections\Main.scala -> C:\Users\Алескандр\.m2\repository\org\scala-lang\scala-library\2.12.8\scala-library-2.12.8.jar
+   D:\Projects\Mai\Scala\lession9\src\main\scala\org\mai\dep110\scala\implicits\ImplicitClass.scala -> C:\Program Files (x86)\Java\jdk1.8.0_231\jre\lib\rt.jar
+   D:\Projects\Mai\Scala\lession9\src\main\scala\org\mai\dep110\scala\implicits\ImplicitClass.scala -> C:\Users\Алескандр\.m2\repository\org\scala-lang\scala-library\2.12.8\scala-library-2.12.8.jar
+   D:\Projects\Mai\Scala\lession9\src\main\scala\org\mai\dep110\scala\implicits\ImplicitParameter.scala -> C:\Program Files (x86)\Java\jdk1.8.0_231\jre\lib\rt.jar
+   D:\Projects\Mai\Scala\lession9\src\main\scala\org\mai\dep110\scala\implicits\ImplicitParameter.scala -> C:\Users\Алескандр\.m2\repository\org\scala-lang\scala-library\2.12.8\scala-library-2.12.8.jar
+   D:\Projects\Mai\Scala\lession9\src\main\scala\org\mai\dep110\scala\iris\IrisExample.scala -> C:\Program Files (x86)\Java\jdk1.8.0_231\jre\lib\rt.jar
+   D:\Projects\Mai\Scala\lession9\src\main\scala\org\mai\dep110\scala\iris\IrisExample.scala -> C:\Users\Алескандр\.m2\repository\org\scala-lang\scala-library\2.12.8\scala-library-2.12.8.jar
+   D:\Projects\Mai\Scala\lession9\src\main\scala\org\mai\dep110\scala\patternMatching\Main.scala -> C:\Program Files (x86)\Java\jdk1.8.0_231\jre\lib\rt.jar
+   D:\Projects\Mai\Scala\lession9\src\main\scala\org\mai\dep110\scala\patternMatching\Main.scala -> C:\Users\Алескандр\.m2\repository\org\scala-lang\scala-library\2.12.8\scala-library-2.12.8.jar
+source dependencies:
+external dependencies:
+class names:
+   D:\Projects\Mai\Scala\lession9\src\main\scala\org\mai\dep110\scala\collections\Main.scala -> org.mai.dep110.scala.collections.Main
+   D:\Projects\Mai\Scala\lession9\src\main\scala\org\mai\dep110\scala\collections\Main.scala -> org.mai.dep110.scala.collections.Main$
+   D:\Projects\Mai\Scala\lession9\src\main\scala\org\mai\dep110\scala\collections\Main.scala -> org.mai.dep110.scala.collections.Main$delayedInit$body
+   D:\Projects\Mai\Scala\lession9\src\main\scala\org\mai\dep110\scala\collections\Main.scala -> org.mai.dep110.scala.collections.Person
+   D:\Projects\Mai\Scala\lession9\src\main\scala\org\mai\dep110\scala\collections\Main.scala -> org.mai.dep110.scala.collections.Person$
+   D:\Projects\Mai\Scala\lession9\src\main\scala\org\mai\dep110\scala\collections\Main.scala -> org.mai.dep110.scala.collections.Sex
+   D:\Projects\Mai\Scala\lession9\src\main\scala\org\mai\dep110\scala\collections\Main.scala -> org.mai.dep110.scala.collections.Sex$
+   D:\Projects\Mai\Scala\lession9\src\main\scala\org\mai\dep110\scala\implicits\ImplicitClass.scala -> org.mai.dep110.scala.implicits.ImplicitClass
+   D:\Projects\Mai\Scala\lession9\src\main\scala\org\mai\dep110\scala\implicits\ImplicitClass.scala -> org.mai.dep110.scala.implicits.ImplicitClass$
+   D:\Projects\Mai\Scala\lession9\src\main\scala\org\mai\dep110\scala\implicits\ImplicitClass.scala -> org.mai.dep110.scala.implicits.ImplicitClass$StringToIris
+   D:\Projects\Mai\Scala\lession9\src\main\scala\org\mai\dep110\scala\implicits\ImplicitClass.scala -> org.mai.dep110.scala.implicits.ImplicitClass$delayedInit$body
+   D:\Projects\Mai\Scala\lession9\src\main\scala\org\mai\dep110\scala\implicits\ImplicitClass.scala -> org.mai.dep110.scala.implicits.Iris
+   D:\Projects\Mai\Scala\lession9\src\main\scala\org\mai\dep110\scala\implicits\ImplicitClass.scala -> org.mai.dep110.scala.implicits.Iris$
+   D:\Projects\Mai\Scala\lession9\src\main\scala\org\mai\dep110\scala\implicits\ImplicitParameter.scala -> org.mai.dep110.scala.implicits.Abonent
+   D:\Projects\Mai\Scala\lession9\src\main\scala\org\mai\dep110\scala\implicits\ImplicitParameter.scala -> org.mai.dep110.scala.implicits.Abonent$
+   D:\Projects\Mai\Scala\lession9\src\main\scala\org\mai\dep110\scala\implicits\ImplicitParameter.scala -> org.mai.dep110.scala.implicits.ImplicitParameter
+   D:\Projects\Mai\Scala\lession9\src\main\scala\org\mai\dep110\scala\implicits\ImplicitParameter.scala -> org.mai.dep110.scala.implicits.ImplicitParameter$
+   D:\Projects\Mai\Scala\lession9\src\main\scala\org\mai\dep110\scala\implicits\ImplicitParameter.scala -> org.mai.dep110.scala.implicits.ImplicitParameter$delayedInit$body
+   D:\Projects\Mai\Scala\lession9\src\main\scala\org\mai\dep110\scala\iris\IrisExample.scala -> org.mai.dep110.scala.iris.Iris
+   D:\Projects\Mai\Scala\lession9\src\main\scala\org\mai\dep110\scala\iris\IrisExample.scala -> org.mai.dep110.scala.iris.Iris$
+   D:\Projects\Mai\Scala\lession9\src\main\scala\org\mai\dep110\scala\iris\IrisExample.scala -> org.mai.dep110.scala.iris.IrisExample
+   D:\Projects\Mai\Scala\lession9\src\main\scala\org\mai\dep110\scala\iris\IrisExample.scala -> org.mai.dep110.scala.iris.IrisExample$
+   D:\Projects\Mai\Scala\lession9\src\main\scala\org\mai\dep110\scala\iris\IrisExample.scala -> org.mai.dep110.scala.iris.IrisExample$StringToIris
+   D:\Projects\Mai\Scala\lession9\src\main\scala\org\mai\dep110\scala\iris\IrisExample.scala -> org.mai.dep110.scala.iris.IrisExample$delayedInit$body
+   D:\Projects\Mai\Scala\lession9\src\main\scala\org\mai\dep110\scala\iris\IrisExample.scala -> org.mai.dep110.scala.iris.PetalSize
+   D:\Projects\Mai\Scala\lession9\src\main\scala\org\mai\dep110\scala\iris\IrisExample.scala -> org.mai.dep110.scala.iris.PetalSize$
+   D:\Projects\Mai\Scala\lession9\src\main\scala\org\mai\dep110\scala\patternMatching\Main.scala -> org.mai.dep110.scala.patternMatching.Dog
+   D:\Projects\Mai\Scala\lession9\src\main\scala\org\mai\dep110\scala\patternMatching\Main.scala -> org.mai.dep110.scala.patternMatching.Dog$
+   D:\Projects\Mai\Scala\lession9\src\main\scala\org\mai\dep110\scala\patternMatching\Main.scala -> org.mai.dep110.scala.patternMatching.Main
+   D:\Projects\Mai\Scala\lession9\src\main\scala\org\mai\dep110\scala\patternMatching\Main.scala -> org.mai.dep110.scala.patternMatching.Main$
+   D:\Projects\Mai\Scala\lession9\src\main\scala\org\mai\dep110\scala\patternMatching\Main.scala -> org.mai.dep110.scala.patternMatching.Main$delayedInit$body
+   D:\Projects\Mai\Scala\lession9\src\main\scala\org\mai\dep110\scala\patternMatching\Main.scala -> org.mai.dep110.scala.patternMatching.Person
+   D:\Projects\Mai\Scala\lession9\src\main\scala\org\mai\dep110\scala\patternMatching\Main.scala -> org.mai.dep110.scala.patternMatching.Person$

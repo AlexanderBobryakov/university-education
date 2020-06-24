@@ -1,0 +1,92 @@
+package org.mai.dep110.scala.iris
+
+import java.util.stream.Collectors
+
+import PetalSize.PetalSize
+
+import scala.collection.convert.WrapAsJava.`deprecated asJavaCollection`
+import scala.io.Source
+import scala.util.Try
+import scala.collection.immutable.List
+
+object IrisExample extends App {
+
+  val flowers = loadFromFile("iris.data")
+  //println(flowers)
+
+  //get average sepal width
+  private val widths = flowers.map(_.sepalWidth)
+  val avgSepalLength = widths.sum / widths.size
+  println(avgSepalLength)
+
+  //get average petal square - petal width multiplied on petal length
+  private val squares = flowers.map(value => (value.petalWidth * value.petalLength))
+  val avgPetalLength = flowers.map(value => (value.petalWidth * value.petalLength)).sum / flowers.size
+  println(avgPetalLength)
+
+  //get average petal square for flowers with sepal width > 4
+  private val squaresWithFilter = flowers // TODO чрезе foldLeft
+    .filter(iris => iris.sepalWidth > 4)
+    .map(value => (value.petalWidth * value.petalLength))
+  val avgPetalSquare = squaresWithFilter.sum / squaresWithFilter.size
+  println(avgPetalSquare)
+
+  //get flowers grouped by Petal size (PetalSize.Small, etc.) with function getPetalSize
+  val groupsByPetalSize = flowers.groupBy(iris => getPetalSize(iris))
+  println(groupsByPetalSize)
+
+  //get max sepal width for flowers grouped by species
+  val maxSepalWidthForGroupsBySpecies = flowers
+    .groupBy(_.species)
+    .mapValues(list => list.maxBy(iris => iris.sepalWidth).sepalWidth)
+  println(maxSepalWidthForGroupsBySpecies)
+
+
+  def loadFromFile(path: String): List[Iris] = {
+    Source
+      .fromFile(path)
+      .getLines
+      .map(line => line.toIris)
+      .filter {
+        case Some(iris) => true
+        case None => false
+      }
+      .map {
+        case Some(iris) => iris
+      }
+      .toList
+  }
+
+  implicit class StringToIris(str: String) {
+    def toIris: Option[Iris] = str.split(",") match {
+      case Array(a, b, c, d, e) if isDouble(a) && isDouble(b) && isDouble(c) && isDouble(d) =>
+        Some(
+          Iris(
+            a.toDouble,
+            b.toDouble,
+            c.toDouble,
+            d.toDouble,
+            e))
+      case others => None
+    }
+
+    def isDouble(str: String): Boolean = Try(str.toDouble).isSuccess
+  }
+
+  def getPetalSize(iris: Iris): PetalSize = {
+    val petalSquare = iris.petalLength * iris.petalWidth
+    if (petalSquare < 2.0)
+      return PetalSize.Small
+    if (petalSquare < 5.0)
+      return PetalSize.Medium
+    return PetalSize.Large
+  }
+
+}
+
+object PetalSize extends Enumeration {
+  type PetalSize = Value
+  val Large, Medium, Small = Value
+}
+
+case class Iris(sepalLength: Double, sepalWidth: Double, petalLength: Double, petalWidth: Double, species: String)
