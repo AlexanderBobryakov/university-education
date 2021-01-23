@@ -1,0 +1,1 @@
+Зайти в Anaconda -> Environment -> python27 и открыть консоль с ним -> jupyter notebook
