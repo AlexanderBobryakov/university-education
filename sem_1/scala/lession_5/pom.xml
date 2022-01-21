@@ -27,7 +27,7 @@
 		
         <scalikejdbc.version>3.3.1</scalikejdbc.version>
 
-		<h2database.version>1.4.197</h2database.version>
+		<h2database.version>2.1.210</h2database.version>
 		
 		<exec.mainClass>org.mai.dep810.scala.stackoverflow.TestMain</exec.mainClass>
     </properties>	
